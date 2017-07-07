@@ -1,0 +1,7 @@
+div
+  a([routerLink]="['/']") 主页
+  | 
+  a([routerLink]="['/product',1]",[queryParams]="{type:'日常用品'}") 商品信息
+  | 
+  button(type="button",(click)="toProductDetail()") 商品详情
+router-outlet
