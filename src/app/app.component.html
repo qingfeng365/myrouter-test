@@ -1,5 +1,6 @@
 
-<div><a [routerLink]="['/']">主页</a> <a [routerLink]="['/product',1]" [queryParams]="{type:'日常用品'}">商品信息</a> 
-  <button type="button" (click)="toProductDetail()">商品详情</button>
+<div><a [routerLink]="['/home']">主页</a>&nbsp;<a [routerLink]="['/product',1]" [queryParams]="{type:'日常用品'}">商品信息</a>&nbsp;
+  <button type="button" (click)="toProductDetail()">商品详情</button>&nbsp;<a [routerLink]="[{outlets:{aux:'chat'}}]">打开聊天室</a>&nbsp;<a [routerLink]="[{outlets:{aux:null}}]">关闭聊天室</a>&nbsp;<a [routerLink]="[{outlets:{aux:'chat',primary:['product',5]}}]" [queryParams]="{type:'家用电器'}">产品聊天室</a>
 </div>
 <router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
