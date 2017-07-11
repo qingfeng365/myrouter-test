@@ -1,8 +1,9 @@
 
 <div class="product">
   <p>这是商品信息组件</p>
-  <p>商品编号:{{productId}}</p>
-  <p>商品类别:{{productType}}</p>
-  <div><a [routerLink]="['./']">商品描述</a>&nbsp;<a [routerLink]="['./seller',100]">销售员信息</a></div>
+  <p>商品编号:{{product.id}}</p>
+  <p>商品名称:{{product.name}}</p>
+  <p>商品类别:{{product.productType}}</p>
+  <div><a [routerLink]="['./']">商品描述</a>&nbsp;<a [routerLink]="['./seller',product.sellerId]">销售员信息</a></div>
   <router-outlet></router-outlet>
 </div>

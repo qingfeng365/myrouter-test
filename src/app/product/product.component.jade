@@ -1,9 +1,10 @@
 .product
   p 这是商品信息组件
-  p 商品编号:{{productId}}
-  p 商品类别:{{productType}}
+  p 商品编号:{{product.id}}
+  p 商品名称:{{product.name}}
+  p 商品类别:{{product.productType}}
   div
     a([routerLink]="['./']") 商品描述
     | &nbsp;
-    a([routerLink]="['./seller',100]") 销售员信息
+    a([routerLink]="['./seller',product.sellerId]") 销售员信息
   router-outlet
